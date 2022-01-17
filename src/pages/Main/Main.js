@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useNavigate} from "react-router-dom"
 import "./Main.scss"
 
@@ -11,7 +11,7 @@ const Main = () => {
 
   return (
   <>
-    {/* <!--header--> */}
+    {/* <!-Header--> */}
     <header>
       <div className="title">
         <img onClick={goToLogin} src="/images/logo.png" alt="logo"/>
@@ -37,10 +37,10 @@ const Main = () => {
       <div className="feeds">
         {/* <!--article--> */}
         <article>
-          <header className="article-header">
-            <div className="article-profile">
-              <img className="img-profile" src="/images/yoon.jpeg" alt="img-profile" />
-              <span className="userID main-id font-point">
+          <header className="articleHeader">
+            <div className="articleProfile">
+              <img className="imgProfile" src="/images/yoon.jpeg" alt="imgProfile" />
+              <span className="userID mainId fontPoint">
               and_you
               </span>
             </div>
@@ -48,38 +48,38 @@ const Main = () => {
             <i className="fas fa-ellipsis-h"></i>
           </header>
           
-          <div className="main-image">
+          <div className="mainImage">
           <img src="/images/feed.jpeg" alt="and_you님의 피드 사진" className="mainPic" />
           </div>
 
-          <nav className="icons-react">
-            <div className="icons-left">
-              <img alt ="like-react" className="icon-react" src="/images/like.png" />
-              <img alt="comment-react" className="icon-react" src="/images/comment.png" />
-              <img alt="share-react" className="icon-react" src="/images/share.png" />
+          <nav className="iconsReact">
+            <div className="iconsLeft">
+              <img alt ="likeReact" className="iconReact" src="/images/like.png" />
+              <img alt="commentReact" className="iconReact" src="/images/comment.png" />
+              <img alt="shareReact" className="iconReact" src="/images/share.png" />
             </div>
-            <img alt="save" className="icon-react" src="/images/save.png" />
+            <img alt="save" className="iconReact" src="/images/save.png" />
           </nav>
 
           {/* <!-- article text data --> */}
           <div className="reaction">
 
-            <div className="liked-people">
+            <div className="likedPeople">
               <img className="pic" src="/images/yoon6.jpeg" alt="earpearp님의 프로필 사진" />
-              <p><span className= "font-point">earpearp</span>님 <span className= "font-point">외 여러명</span>이 좋아합니다</p>
+              <p><span className= "fontPoint">earpearp</span>님 <span className= "fontPoint">외 여러명</span>이 좋아합니다</p>
             </div>
 
             <div className="description">
-              <p><span className= "font-point userID">and_you</span><span className="at-tag">@coding @koo</span> 😍</p>
+              <p><span className= "fontPoint userID">and_you</span><span className="atTag">@coding @koo</span> 😍</p>
             </div>
 
-            <div className="comment-section">
+            <div className="commentSection">
               <ul className="comments">
                 <li>
                   <span>
-                    <span className= "font-point userID">bestsilveristhebest</span>여기 어디에요? 😀
+                    <span className= "fontPoint userID">bestsilveristhebest</span>여기 어디에요? 😀
                   </span>
-                  <img className="comment-heart" src="/images/heart.png" alt="하트" />
+                  <img className="commentHeart" src="/images/heart.png" alt="하트" />
                 </li>
               </ul>
 
@@ -102,7 +102,7 @@ const Main = () => {
         <div className="myProfile">
           <img alt="jiyoon" className="pic" src="/images/jiyoon.jpeg" />
           <div>
-            <span className="userID font-point">seizetheday</span>
+            <span className="userID fontPoint">seizetheday</span>
             <span className="sub-span">JIYOON KIM</span>  
           </div>
         </div>
@@ -118,40 +118,40 @@ const Main = () => {
           <ul className="story-list">
             <li>
               <div className="gradient-wrap">
-                <img alt="chan" className="img-profile story" src="/images/chan2.jpeg" />
+                <img alt="chan" className="imgProfile story" src="/images/chan2.jpeg" />
               </div>
               <div  className="profile-text">
-                <span className="userID font-point">lovelychaeeun</span>
+                <span className="userID fontPoint">lovelychaeeun</span>
                 <span className="overtime">10분 전</span>
               </div>
             </li>
 
             <li>
               <div className="gradient-wrap">
-                <img alt="goeun" className="img-profile story" src="/images/goeun.png"/>
+                <img alt="goeun" className="imgProfile story" src="/images/goeun.png"/>
               </div>
               <div  className="profile-text">
-                <span className="userID font-point">bestsilveristhebest</span>
+                <span className="userID fontPoint">bestsilveristhebest</span>
                 <span className="overtime">20분 전</span>
               </div>
             </li>
 
             <li>
               <div className="gradient-wrap">
-                <img alt="chan" className="img-profile story" src="/images/chan1.jpeg" />
+                <img alt="chan" className="imgProfile story" src="/images/chan1.jpeg" />
               </div>
               <div  className="profile-text">
-                <span className="userID font-point">superchan</span>
+                <span className="userID fontPoint">superchan</span>
                 <span className="overtime">1시간 전</span>
               </div>
             </li>
 
             <li>
               <div className="gradient-wrap">
-                <img alt="goeun" className="img-profile story" src="/images/goeun.jpeg" />
+                <img alt="goeun" className="imgProfile story" src="/images/goeun.jpeg" />
               </div>
               <div  className="profile-text">
-                <span className="userID font-point">goeun_lovely</span>
+                <span className="userID fontPoint">goeun_lovely</span>
                 <span className="overtime">10분 전</span>
               </div>
             </li>
@@ -168,10 +168,10 @@ const Main = () => {
           
           <ul className="recommend-list">
             <li>
-              <div className="recommend-friend-profile">
-                <img className="img-profile" src="/images/yoon3.jpeg" alt="howareyou님의 프로필 사진" />
+              <div className="recommend-friendProfile">
+                <img className="imgProfile" src="/images/yoon3.jpeg" alt="howareyou님의 프로필 사진" />
                 <div className="profile-text">
-                  <span className="userID font-point">howareyou</span>
+                  <span className="userID fontPoint">howareyou</span>
                   <span className="sub-span">lovelychaeeun님 외 2명이... </span>
                 </div>
               </div>
@@ -179,10 +179,10 @@ const Main = () => {
             </li>
 
             <li>
-              <div className="recommend-friend-profile">
-                <img className="img-profile" src="/images/imfine.jpeg" alt="imfine님의 프로필 사진" />
+              <div className="recommend-friendProfile">
+                <img className="imgProfile" src="/images/imfine.jpeg" alt="imfine님의 프로필 사진" />
                 <div className="profile-text">
-                  <span className="userID font-point">imfine</span>
+                  <span className="userID fontPoint">imfine</span>
                   <span className="sub-span">bestsilveristhebest님 외 3명이...</span>  
                 </div>
               </div>
@@ -190,10 +190,10 @@ const Main = () => {
             </li>
             <li>
 
-              <div className="recommend-friend-profile">
-                <img className="img-profile" src="/images/hello.jpeg" alt="thankyou님의 프로필 사진" />
+              <div className="recommend-friendProfile">
+                <img className="imgProfile" src="/images/hello.jpeg" alt="thankyou님의 프로필 사진" />
                 <div className="profile-text">
-                  <span className="userID font-point">thankyou</span>
+                  <span className="userID fontPoint">thankyou</span>
                   <span className="sub-span">momo님 외 5명이 팔로우합...</span>  
                 </div>
               </div>

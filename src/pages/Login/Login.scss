@@ -4,7 +4,7 @@ section {
   align-items: center;
   height: 100vh;
 }
-.loginpage {
+.loginPage {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,7 +23,7 @@ h1 {
   margin: auto;
 }
 
-.logininput {
+.loginInput {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -41,16 +41,30 @@ input {
   background-color: #fafafa;
 }
 
-.loginBtn {
+.logoffBtn {
+  text-decoration: none;
   background-color: #c0dffd;
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   height: 35px;
   font-size: 16px;
-  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+.loginBtn {
+  text-decoration: none;
+  background-color: #2a80d6;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  height: 35px;
+  font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 40px;

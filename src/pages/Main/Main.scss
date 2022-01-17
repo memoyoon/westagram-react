@@ -47,7 +47,7 @@ span.overtime {
   color: #8e8e8e;
 }
 
-span.font-point {
+span.fontPoint {
   font-weight: 500;
   font-size: 14px;
   color: #262626;
@@ -122,7 +122,7 @@ main {
 
 /* main */
 
-.article-header {
+.articleHeader {
   display: flex;
   padding: 10px 30px 10px 30px;
 }
@@ -167,41 +167,41 @@ article {
   height: 180px;
 }
 /* article */
-.article-profile {
+.articleProfile {
   display: flex;
   align-items: center;
 }
-.img-profile {
+.imgProfile {
   width: 37px;
   height: 37px;
   border: 1px solid #fafafa;
   border-radius: 50%;
 }
-.main-image img {
+.mainImage img {
   width: 100%;
 }
-.main-id {
+.mainId {
   margin-left: 14px;
 }
 .icon-more {
   justify-self: end;
 }
-.icons-react {
+.iconsReact {
   height: 40px;
   padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.icon-react {
+.iconReact {
   width: 25px;
   height: 25px;
 }
-.icons-left {
+.iconsLeft {
   display: flex;
   align-items: center;
 }
-.icons-left .icon-react {
+.iconsLeft .iconReact {
   margin-right: 12px;
 }
 
@@ -211,20 +211,20 @@ article {
   display: flex;
   flex-direction: column;
 }
-.liked-people {
+.likedPeople {
   display: flex;
   align-items: center;
   height: 18px;
   margin: 2px 0 8px 0;
 }
-.liked-people img {
+.likedPeople img {
   display: inline-block;
   margin-right: 4px;
   width: 20px;
   height: 20px;
   border: 1px solid #fafafa;
 }
-.liked-people p {
+.likedPeople p {
   display: inline-block;
   color: #262626;
   font-size: 14px;
@@ -241,7 +241,7 @@ article {
   margin-bottom: 0;
 }
 
-span.at-tag {
+span.atTag {
   color: #00376b;
 }
 
@@ -264,7 +264,7 @@ ul.comments span {
   height: 15px;
   margin-bottom: 7px;
 }
-img.comment-heart {
+img.commentHeart {
   width: 12px;
   height: 12px;
 }
@@ -399,7 +399,7 @@ ul.story-list .profile-text {
   font-weight: 600;
   font-size: 12px;
 }
-.recommend-friend-profile {
+.recommend-friendProfile {
   display: flex;
   align-items: flex-start;
 }
