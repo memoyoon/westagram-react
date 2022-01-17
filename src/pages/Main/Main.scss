@@ -41,7 +41,7 @@ footer p {
 span.userID {
   margin-right: 5px;
 }
-span.sub-span,
+span.subSpan,
 span.overtime {
   font-size: 12px;
   color: #8e8e8e;
@@ -90,7 +90,7 @@ header {
 }
 
 /* 헤더-검색창 */
-.input-div {
+.inputDiv {
   text-align: center;
   background-color: #fafafa;
   border: 2px solid #e2e1e19a;
@@ -107,14 +107,14 @@ header {
 }
 
 /* 우측 메뉴 */
-.right-menu img {
+.rightMenu img {
   box-sizing: content-box;
   width: 30px;
   height: 30px;
   margin-left: 20px;
 }
 
-/* main - feeds & .main-right */
+/* main - feeds & .mainRight */
 main {
   display: flex;
   padding: 60px 230px 0px 230px;
@@ -126,7 +126,7 @@ main {
   display: flex;
   padding: 10px 30px 10px 30px;
 }
-.main-right {
+.mainRight {
   flex: 1;
 }
 .feeds {
@@ -135,7 +135,7 @@ main {
 }
 article,
 .section-story,
-.section-recommend {
+.sectionRecommend {
   background-color: #fff;
   border-radius: 3px;
   border: 1px solid #dbdbdb;
@@ -145,7 +145,7 @@ article {
 }
 
 .section-story,
-.section-recommend {
+.sectionRecommend {
   width: 310px;
   padding: 14px 16px;
   overflow-y: scroll;
@@ -155,7 +155,7 @@ article {
   display: none;
 }
 
-.section-recommend::-webkit-scrollbar {
+.sectionRecommend::-webkit-scrollbar {
   display: none;
 }
 
@@ -163,7 +163,7 @@ article {
   height: 212px;
   margin-bottom: 20px;
 }
-.section-recommend {
+.sectionRecommend {
   height: 180px;
 }
 /* article */
@@ -248,6 +248,7 @@ span.atTag {
 ul.comments {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5px;
 }
 ul.comments li {
   height: 15px;
@@ -268,10 +269,10 @@ img.commentHeart {
   width: 12px;
   height: 12px;
 }
-div.time-log {
+div.timeLog {
   border-bottom: 1px solid #e2e1e1b0;
 }
-div.time-log span {
+div.timeLog span {
   height: 18px;
   font-size: 12px;
   color: #8e8e8e;
@@ -284,7 +285,7 @@ div.time-log span {
   align-items: baseline;
 }
 
-.comment-input {
+.commentInput {
   font-size: 14px;
   width: 560px;
   height: 18px;
@@ -292,13 +293,13 @@ div.time-log span {
   border-style: none;
   color: #262626;
 }
-.comment-input:focus {
+.commentInput:focus {
   outline: none;
 }
-.comment-input::placeholder {
+.commentInput::placeholder {
   color: #8e8e8e;
 }
-button.comment-submit {
+button.commentSubmit {
   color: #0094f6ea;
   background-color: #fff;
   border-style: none;
@@ -308,11 +309,14 @@ button.comment-submit {
   font-size: 14px;
   font-weight: 600;
 }
-.comment-submit:disabled {
+.commentSubmit:disabled {
   color: #b9dffc;
 }
 
-/* main-right */
+.commentInput {
+  background-color: white;
+}
+/* mainRight */
 .myProfile {
   height: 56px;
   margin-top: 10px;
@@ -337,36 +341,36 @@ button.comment-submit {
 }
 
 /* story & recommendation */
-.menu-title {
+.menuTitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
 }
-.sub-title {
+.subTitle {
   font-size: 14px;
   color: #8e8e8e;
   font-weight: 600;
 }
-.find-more {
+.findMore {
   font-size: 12px;
   font-weight: 600;
   color: #262626;
 }
 .story-list li,
-.recommend-list li {
+.recommendList li {
   display: flex;
   align-items: flex-start;
 }
 
-.recommend-list li {
+.recommendList li {
   margin-top: 7px;
 }
 
 ul.story-list img.story {
   border: 1px solid #fff;
 }
-div.gradient-wrap {
+div.gradientWrap {
   width: 41px;
   height: 41px;
   display: flex;
@@ -375,31 +379,31 @@ div.gradient-wrap {
   border-radius: 50%;
   background: radial-gradient(circle at bottom left, #f58020 20%, #be278c);
 }
-ul.story-list .profile-text {
+ul.story-list .profileText {
   margin-top: 3px;
 }
-.profile-text {
+.profileText {
   display: inline-block;
   margin: 0 0 10px 8px;
 }
-.profile-text span {
+.profileText span {
   display: block;
 }
-.profile-text span.userID {
+.profileText span.userID {
   margin-bottom: 2px;
 }
-.recommend-list li {
+.recommendList li {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.btn-follow {
+.btnFollow {
   padding-top: 7px;
   color: #0095f6;
   font-weight: 600;
   font-size: 12px;
 }
-.recommend-friendProfile {
+.recommendFriendProfile {
   display: flex;
   align-items: flex-start;
 }

@@ -24,7 +24,7 @@ const Login = () => {
 
   //유효성 검사
   const checkValidaton = (event) => {
-    if ((email.includes("@")&&password.length>=5)||event.key==="enter"){
+    if (email.includes("@")&&password.length>=5){
       {goToMain()}
     }
     if (email.includes("@")===false) {

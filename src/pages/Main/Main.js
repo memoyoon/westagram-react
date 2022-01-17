@@ -9,6 +9,15 @@ const Main = () => {
     navigate("/")
   }
 
+  const [comment,setComment] = useState("");
+  const [commentList,setCommentList] = useState([]);
+  const [addComment, setAddComment] =useState("false");
+        
+
+  const handleCommentInput = (event) => {
+    commentList(event.target.value);
+  };
+
   return (
   <>
     {/* <!-Header--> */}
@@ -21,11 +30,11 @@ const Main = () => {
       </div>
 
       <div>
-        <input className="input-div" type="text" placeholder="검색" />
+        <input className="inputDiv" type="text" placeholder="검색" />
         <i className="fas fa-search"></i>
       </div>
 
-      <nav className="right-menu">
+      <nav className="rightMenu">
           <img alt="explore" src="/images/explore.png"/>
           <img alt="heart" src="/images/heart.png"/>
           <img alt="profile" src="/images/profile.png"/>
@@ -77,20 +86,52 @@ const Main = () => {
               <ul className="comments">
                 <li>
                   <span>
-                    <span className= "fontPoint userID">bestsilveristhebest</span>여기 어디에요? 😀
+                    <span className= "fontPoint userID">bestsilveristhebest</span>
+                    여기 어디에요? 😀
                   </span>
                   <img className="commentHeart" src="/images/heart.png" alt="하트" />
                 </li>
               </ul>
 
-              <div className="time-log">
+
+            { 
+              commentList.map(function addComment (a, i){
+              return (
+              <ul className="comments" key={i}>
+                <li>
+                  <span>
+                    <span className="fontPoint userID">seizetheday</span>
+                    {a}
+                  </span>
+                  <img className="commentHeart" src="/images/heart.png" alt="하트" />
+                </li>
+              </ul>
+              )
+            })
+            }     
+            <div className="timeLog">
                 <span>32분 전</span>
               </div>
-            </div>          
+            </div>
+
+       
 
             <div className="comment">
-              <input id="comment-input" className="comment-input" type="text" placeholder="댓글 달기..." />
-              <button type="submit" className="comment-submit" disabled>게시</button>
+              <input 
+              id="commentInput" 
+              className="commentInput" 
+              type="text" 
+              placeholder="댓글 달기..."
+              onChange={ (e) =>setComment(e.target.value)} />
+              <button 
+              type="submit" 
+              className="commentSubmit"
+              onClick={ ()=> {
+                const arrayCopy = [...commentList];
+                arrayCopy.push(comment);
+                setCommentList(arrayCopy);
+              }}
+              >게시</button>
             </div>
           </div>
 
@@ -98,59 +139,59 @@ const Main = () => {
       </div>    
          {/* <!--aside--> */}
     
-      <div className="main-right">
+      <div className="mainRight">
         <div className="myProfile">
           <img alt="jiyoon" className="pic" src="/images/jiyoon.jpeg" />
           <div>
             <span className="userID fontPoint">seizetheday</span>
-            <span className="sub-span">JIYOON KIM</span>  
+            <span className="subSpan">JIYOON KIM</span>  
           </div>
         </div>
         
         
         {/* <!-- story section --> */}
         <div className="section-story">
-          <div className="menu-title">
-            <span className="sub-title">스토리</span>
-            <span className="find-more">모두 보기</span>
+          <div className="menuTitle">
+            <span className="subTitle">스토리</span>
+            <span className="findMore">모두 보기</span>
           </div>
 
           <ul className="story-list">
             <li>
-              <div className="gradient-wrap">
+              <div className="gradientWrap">
                 <img alt="chan" className="imgProfile story" src="/images/chan2.jpeg" />
               </div>
-              <div  className="profile-text">
+              <div  className="profileText">
                 <span className="userID fontPoint">lovelychaeeun</span>
                 <span className="overtime">10분 전</span>
               </div>
             </li>
 
             <li>
-              <div className="gradient-wrap">
+              <div className="gradientWrap">
                 <img alt="goeun" className="imgProfile story" src="/images/goeun.png"/>
               </div>
-              <div  className="profile-text">
+              <div  className="profileText">
                 <span className="userID fontPoint">bestsilveristhebest</span>
                 <span className="overtime">20분 전</span>
               </div>
             </li>
 
             <li>
-              <div className="gradient-wrap">
+              <div className="gradientWrap">
                 <img alt="chan" className="imgProfile story" src="/images/chan1.jpeg" />
               </div>
-              <div  className="profile-text">
+              <div  className="profileText">
                 <span className="userID fontPoint">superchan</span>
                 <span className="overtime">1시간 전</span>
               </div>
             </li>
 
             <li>
-              <div className="gradient-wrap">
+              <div className="gradientWrap">
                 <img alt="goeun" className="imgProfile story" src="/images/goeun.jpeg" />
               </div>
-              <div  className="profile-text">
+              <div  className="profileText">
                 <span className="userID fontPoint">goeun_lovely</span>
                 <span className="overtime">10분 전</span>
               </div>
@@ -160,44 +201,44 @@ const Main = () => {
         
           {/* <!-- recommendation --> */}
           {/* <!-- recommendation section --> */}
-        <div className="section-recommend">
-          <div className="menu-title">
-            <span className="sub-title">회원님을 위한 추천</span>
-            <span className="find-more">모두 보기</span>
+        <div className="sectionRecommend">
+          <div className="menuTitle">
+            <span className="subTitle">회원님을 위한 추천</span>
+            <span className="findMore">모두 보기</span>
           </div>
           
-          <ul className="recommend-list">
+          <ul className="recommendList">
             <li>
-              <div className="recommend-friendProfile">
+              <div className="recommendFriendProfile">
                 <img className="imgProfile" src="/images/yoon3.jpeg" alt="howareyou님의 프로필 사진" />
-                <div className="profile-text">
+                <div className="profileText">
                   <span className="userID fontPoint">howareyou</span>
-                  <span className="sub-span">lovelychaeeun님 외 2명이... </span>
+                  <span className="subSpan">lovelychaeeun님 외 2명이... </span>
                 </div>
               </div>
-              <span className="btn-follow">팔로우</span>
+              <span className="btnFollow">팔로우</span>
             </li>
 
             <li>
-              <div className="recommend-friendProfile">
+              <div className="recommendFriendProfile">
                 <img className="imgProfile" src="/images/imfine.jpeg" alt="imfine님의 프로필 사진" />
-                <div className="profile-text">
+                <div className="profileText">
                   <span className="userID fontPoint">imfine</span>
-                  <span className="sub-span">bestsilveristhebest님 외 3명이...</span>  
+                  <span className="subSpan">bestsilveristhebest님 외 3명이...</span>  
                 </div>
               </div>
-              <span className="btn-follow">팔로우</span>
+              <span className="btnFollow">팔로우</span>
             </li>
             <li>
 
-              <div className="recommend-friendProfile">
+              <div className="recommendFriendProfile">
                 <img className="imgProfile" src="/images/hello.jpeg" alt="thankyou님의 프로필 사진" />
-                <div className="profile-text">
+                <div className="profileText">
                   <span className="userID fontPoint">thankyou</span>
-                  <span className="sub-span">momo님 외 5명이 팔로우합...</span>  
+                  <span className="subSpan">momo님 외 5명이 팔로우합...</span>  
                 </div>
               </div>
-              <span className="btn-follow">팔로우</span>
+              <span className="btnFollow">팔로우</span>
             </li>
           </ul>
         </div>
